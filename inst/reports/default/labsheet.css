@@ -1,0 +1,71 @@
+/* styles for solveme student text entry boxes*/
+/* .solveme { border: 2px dotted red; } */
+/* .solveme.correct { border: 2px solid blue; } */
+
+.solveme { 
+  border: 1.5px solid gray; 
+  background-color: rgba(255,0,0,0.1); 
+}
+
+.solveme.correct { 
+  border: 1.5px solid blue; 
+  background-color: rgba(0,255,0,0.2) 
+}
+
+/* styles for hidden solutions */
+.solution {
+    height: 2.5em;
+    overflow-y: hidden;
+    padding: 0.5em;
+    color: blue;
+}
+.solution.open {
+    height: auto;
+    /* background-color: rgba(192, 192, 192, 0.2); */
+    background-color: rgba(0,0,255,0.1);
+    border-radius: 5px;
+}
+.solution button {
+    height: 2em;
+    margin-bottom: 0.5em;
+}
+.solution pre.sourceCode {
+    border-color: blue;
+}
+/* Question box style */
+.test_box {
+  display: block;
+  border: 1px solid Gray;
+  border-radius: 8px;
+    width: 90%;
+    left: 6px;
+    padding: 5px 5px 5px 15px;
+    color: Red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* Main Lab Sheet Question Area Style: red text in rounded rectangle; */
+.q_box { 
+  display: block;
+  border: 1px solid Gray; 
+  border-radius: 8px;
+    width: 90%;
+    left: 6px;
+    padding: 5px 5px 5px 15px;
+    color: Red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* Font settings: these should probably be somewhere else */
+h1, .h1 {
+    margin-top: 50px;
+}
+h2, .h2, h3, .h3 {
+    margin-top: 30px;
+}
+body{
+  font-size: 12pt;
+}
+
