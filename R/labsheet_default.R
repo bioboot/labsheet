@@ -13,7 +13,7 @@
 #' @export
 labsheet_default <- function(...) {
   css <- system.file("reports/default/labsheet.css", package = "labsheet")
-  js <- system.file("reports/default/webex.js", package = "labsheet")
+  js <- system.file("reports/default/labsheet.js", package = "labsheet")
 
   knitr::knit_hooks$set(labsheet.hide = function(before, options, envir) {
     if (before) {

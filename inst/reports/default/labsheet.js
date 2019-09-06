@@ -4,8 +4,8 @@
 update_total_correct = function() {
   if (t = document.getElementById("total_correct")) {
     t.innerHTML =
-      document.getElementsByClassName("correct").length + " of " +
-      document.getElementsByClassName("solveme").length + " correct";
+      document.getElementsByClassName("correct").length + "/" +
+      document.getElementsByClassName("solveme").length;
   }
 }
 
@@ -30,7 +30,7 @@ solveme_func = function(e) {
   if (cl.contains("nospaces")) {
     my_answer = my_answer.replace(/ /g, "");
   }
-  
+
   if (my_answer !== "" & real_answers.includes(my_answer)) {
     cl.add("correct");
   } else {
@@ -39,13 +39,13 @@ solveme_func = function(e) {
 
   // match numeric answers within a specified tolerance
   if(this.dataset.tol){
-    var tol = JSON.parse(this.dataset.tol);  
+    var tol = JSON.parse(this.dataset.tol);
     var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
     if (matches.reduce((a, b) => a + b, 0) > 0) {
       cl.add("correct");
     } else {
       cl.remove("correct");
-    }  
+    }
   }
 
   // added regex bit
@@ -53,9 +53,9 @@ solveme_func = function(e) {
     answer_regex = RegExp(real_answers.join("|"))
     if (answer_regex.test(my_answer)) {
       cl.add("correct");
-    }  
+    }
   }
-  
+
   update_total_correct();
 }
 
@@ -68,7 +68,7 @@ window.onload = function() {
       buttons[i].onclick = b_func;
     }
   }
-  
+
   /* set up solveme inputs */
   var solveme = document.getElementsByClassName("solveme");
 
@@ -76,10 +76,10 @@ window.onload = function() {
     /* make sure input boxes don't auto-anything */
     solveme[i].setAttribute("autocomplete","off");
     solveme[i].setAttribute("autocorrect", "off");
-    solveme[i].setAttribute("autocapitalize", "off"); 
+    solveme[i].setAttribute("autocapitalize", "off");
     solveme[i].setAttribute("spellcheck", "false");
     solveme[i].value = "";
-    
+
     /* adjust answer for ignorecase or nospaces */
     var cl = solveme[i].classList;
     var real_answer = solveme[i].dataset.answer;
@@ -90,12 +90,12 @@ window.onload = function() {
       real_answer = real_answer.replace(/ /g, "");
     }
     solveme[i].dataset.answer = real_answer;
-    
+
     /* attach checking function */
     solveme[i].onkeyup = solveme_func;
     solveme[i].onchange = solveme_func;
   }
-  
+
   update_total_correct();
 }
 
