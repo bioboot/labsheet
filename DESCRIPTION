@@ -1,15 +1,14 @@
 Package: labsheet
 Type: Package
 Title: Barry's Hands-on Lab Sheet Template
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person("Barry", "Grant", email = "bjgrant@ucsd.edu",
   role = c("aut", "cre"))
-Description: A starting point Rmarkdown HTML template for hands-on worksheets 
-    utilized in Barry's Bioinformatics classes at UCSD. This includes CSS 
-    style settings, inline R functions for creating interactive answer 
-    checking, and accessory functions for hide/reveal answer display. 
-    Functions of note include fitb, mcq, torf, hide, unhide, question_start, and 
-    question_end. The function labsheet_default is used for template setup.
+Description: An rmarkdown template for generating HTML hands-on worksheets 
+    utilized in Barry's Bioinformatics classes at UCSD. This includes in-line R 
+    functions for creating student question responses, interactive answer 
+    checking, score tracking, and accessory functions for hide/reveal answer 
+    display. Extensive CSS style settings are also provided as R functions.  
 Imports:
     jsonlite,
     rmarkdown,

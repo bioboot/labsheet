@@ -217,3 +217,23 @@ question_start <- function() {
 question_end <- function() {
   paste0("\n</div>\n")
 }
+
+
+#' Display floating score counter
+#'
+#' @param elem The html element to display (e.g., div, h3, p, span)
+#' @param args Optional arguments for css classes or styles
+#'
+#' @return A string with the html for displaying a total correct element
+#' @export
+#'
+#' @examples
+#' total_correct()     # <div  id="total_correct"></div>
+#' total_correct("h3") # <h3  id="total_correct"></h3>
+#' total_correct("p", "style='color: red;'")
+#' total_correct("div", "class='customclass'")
+score_counter <- function(elem = "div", args = "") {
+  sprintf("<%s %s class=\"scorecounter\", id=\"total_correct\"></%s>\n\n",
+          elem, args, elem)
+
+}

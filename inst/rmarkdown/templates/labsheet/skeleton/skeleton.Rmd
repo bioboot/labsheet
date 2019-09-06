@@ -1,5 +1,5 @@
 ---
-title: "BIMM-143, Lecture X"
+title: "Lecture X"
 subtitle: 'Class Exercise Title Here'
 output: 
     labsheet::labsheet_default:
@@ -17,53 +17,59 @@ output:
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 if (!requireNamespace("labsheet")) {
-  stop("You must have the 'labsheet' package installed to knit HTML from this template.\n   devtools::install_github(\"bioboot/labsheet\")")
+  stop("You must install the 'labsheet' package to use this template.\n   devtools::install_github(\"bioboot/labsheet\")")
 } else {
   library("labsheet")
 }
 ```
 
+<!-- Track Correct Student Responses -->
+`r score_counter()`
 
+<!-- Author, class URL and time-stamp details -->
 `r author(course="bimm143")`
+
 
 # Background  
 The goal of this hands-on session is ...**Add Your Class Text Here**...
 
-The folowing text is taken from the [labsheet package](https://github.com/bioboot/labsheet) template demonstrating how instructors can create interactive web documents that students can use in self-guided learning.
+This template text, from the [labsheet package](https://github.com/bioboot/labsheet), demonstrates how instructors can create interactive web documents that students can use for enhanced self-guided learning beyond that offered by conventional Rmarkdown/HTML documents.  
 
-The labsheet package provides a number of functions that you use in [inline R code](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) to create HTML widgets (text boxes, pull down menus, and buttons that reveal hidden content such as hints and solutions). These features are based on on ideas from [Software Carpentry](https://software-carpentry.org/lessons/) and functions from the **webex** and **learnr** packages.  
+Functions from this package are intended to be used within Rmarkdown documents as [inline R code](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) to create a range of HTML widgets (text boxes, pull down menus, and buttons that reveal hidden content such as hints and solutions). Feedback and counting of correct answers is provided via javascrip. At its most basic this allows students to answer questions, evaluate their responses and provide extra hints and solutions as required. A number of these features are based on on ideas from [Software Carpentry](https://software-carpentry.org/lessons/) and functions from the **webex** and **learnr** packages.  
 
 
 # Examples
-Example use of labsheet function use is given below. Knit this file to HTML to see how it works.
+Example labsheet function use is given below. Knit this file to HTML to see how it works.
 
+> **Side-note:**  To fully engage with this worksheet please provide your answers in the red rectangles after each question. Correct answers will be indicated by a change of rectangle color. For example, type 2 in the first question box and note color change: 
+
+<!-- Start a boxed and colored question block -->
 `r question_start()`
-<p style="color: gray;">**Side-note:**  To fully engage with this worksheet please provide your answers in the red rectangles after each question. Correct answers will be indicated by a change of rectangle color. For example, type 2 in the first question box and note color change: </p> 
-
 - **Q.** What is 1+1? `r fitb("2")`
 - **Q.** Type a vowel: `r fitb(c("A", "E", "I", "O" , "U"), ignore_case = TRUE)`
 - **Q.** Complete, "Never gonna give you up, never gonna: `r mcq(c("let you go", "turn you down", "run away", answer = "let you down"))`"
 - **Q.** True or False? You can permute values in a vector using `sample()`. `r torf(TRUE)`
 
-`r hide("More deatils")`
+`r hide("More details")`
 Buttons such as this one can be used to provide additional hints, background information, or answers on an optional basis (i.e. click to hide/reveal this content).  
 
 **We recommend that you attempt the questions before revealing these additional details.** 
 `r unhide()`
 `r question_end()`
-
+<!-- End first question block -->
 
 ## Plot problem
 
 `r question_start()`
-**Recreate the scatterplot below, using the built-in `cars` dataset.**
+Recreate the scatterplot below, using the built-in `cars` dataset.
 
 ```{r echo = FALSE}
 with(cars, plot(speed, dist, xlab="Speed (mph)", ylab="Stopping Distance (ft)"))
 ```
 
-`r hide("I need a hint")`
+`r hide("Hint")`
 See the documentation for `plot()` (`?plot`)
 `r unhide()`
 

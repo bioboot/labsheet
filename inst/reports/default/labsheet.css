@@ -2,14 +2,14 @@
 /* .solveme { border: 2px dotted red; } */
 /* .solveme.correct { border: 2px solid blue; } */
 
-.solveme { 
-  border: 1.5px solid gray; 
-  background-color: rgba(255,0,0,0.1); 
+.solveme {
+  border: 1.5px solid gray;
+  background-color: rgba(255,0,0,0.1);
 }
 
-.solveme.correct { 
-  border: 1.5px solid blue; 
-  background-color: rgba(0,255,0,0.2) 
+.solveme.correct {
+  border: 1.5px solid blue;
+  background-color: rgba(0,255,0,0.2)
 }
 
 /* styles for hidden solutions */
@@ -46,9 +46,9 @@
 }
 
 /* Main Lab Sheet Question Area Style: red text in rounded rectangle; */
-.q_box { 
+.q_box {
   display: block;
-  border: 1px solid Gray; 
+  border: 1px solid Gray;
   border-radius: 8px;
     width: 90%;
     left: 6px;
@@ -67,5 +67,27 @@ h2, .h2, h3, .h3 {
 }
 body{
   font-size: 12pt;
+}
+
+blockquote p {
+  font-size: 12pt;
+  color: gray;
+}
+
+.scorecounter {
+  position: -webkit-sticky; /* Required for Safari */
+  position: sticky;
+  top: -1px;
+  float: right;
+  /* font-weight: bold; */
+  border: 1px solid lightgray;
+  margin: 0;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  background: rgba(0,255,0,0.2);
+  /* color: white; */
+  color: darkgray;
 }
 
