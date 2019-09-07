@@ -14,6 +14,7 @@
 labsheet_default <- function(...) {
   css <- system.file("reports/default/labsheet.css", package = "labsheet")
   js <- system.file("reports/default/labsheet.js", package = "labsheet")
+  footer <- system.file("reports/default/footer.html", package = "labsheet")
 
   knitr::knit_hooks$set(labsheet.hide = function(before, options, envir) {
     if (before) {
@@ -28,7 +29,7 @@ labsheet_default <- function(...) {
   })
 
   rmarkdown::html_document(css = css,
-                           includes = rmarkdown::includes(after_body = js),
+                           includes = rmarkdown::includes(after_body = c(js,footer)),
                            smart = FALSE,
                            ...)
 }
