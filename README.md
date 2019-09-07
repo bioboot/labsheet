@@ -77,7 +77,7 @@ include:
 | `question_end()`        | css            | style question block           |
 | `author()`              | html text      | author and date text           |
 | `score_counter()`       | floating text  | floating score counter         |
-| `total_correct`         | html text      | total count of correct answers |
+| `total_correct()`       | html text      | total count of correct answers |
 
 **All package functions**:
 
