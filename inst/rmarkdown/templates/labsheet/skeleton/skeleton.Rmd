@@ -18,7 +18,7 @@ output:
     pdf_document: default
 ---
 
-
+<!-- Standard knitr setup with labsheet package loading -->
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -32,7 +32,7 @@ if (!requireNamespace("labsheet")) {
 <!-- Track Correct Student Responses -->
 `r score_counter()`
 
-<!-- Author, class URL and time-stamp details -->
+<!-- Author, course URL and time-stamp details -->
 `r author(course="bimm143")`
 
 
