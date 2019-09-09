@@ -12,6 +12,10 @@ output:
         number_sections: false
         code_folding: show
         df_print: paged
+    word_document: 
+      reference_docx: !expr system.file('rmarkdown/templates/labsheet/skeleton/labsheet_template.docx', package='labsheet')
+      keep_md: true
+    pdf_document: default
 ---
 
 
