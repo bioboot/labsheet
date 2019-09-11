@@ -54,7 +54,7 @@ Example labsheet function use is given below. Knit this file to HTML to see how 
 - **Q.** What is 1+1? `r fitb("2")`
 - **Q.** Type a vowel: `r fitb(c("A", "E", "I", "O" , "U"), ignore_case = TRUE)`
 - **Q.** Complete, "Never gonna give you up, never gonna: `r mcq(c("let you go", "turn you down", "run away", answer = "let you down"))`"
-- **Q.** True or False? You can permute values in a vector using `sample()`. `r torf(TRUE)`
+- **Q.** True or False? You can permute values in a vector using `sample()`: `r torf(TRUE)`
 
 `r hide("More details")`
 Buttons such as this one can be used to provide additional hints, background information, or answers on an optional basis (i.e. click to hide/reveal this content).  
